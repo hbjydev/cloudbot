@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: cloudbot-devel
+  name: cloudbot-devel
+spec:
+  containers:
+  - image: localhost/hayden/cloudbot
+    name: cloudbot
+    securityContext:
+      allowPrivilegeEscalation: true
+      capabilities: {}
+      privileged: false
+      readOnlyRootFilesystem: false
+      seLinuxOptions: {}
+status: {}
